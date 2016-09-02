@@ -6,7 +6,7 @@
   },
   "dependencies": {},
   "scripts": {
-    "postcompile": "cd %project:Directory%/Ui && npm install && npm run build"
+    "postcompile": "cd %project:Directory%/Ui && npm run build"
   },
   "frameworks": {
     "netcoreapp1.0": {

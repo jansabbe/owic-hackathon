@@ -1,0 +1,11 @@
+{
+    "globalDependencies": {
+        "core-js": "registry:dt/core-js#0.0.0+20160725163759",
+        "mocha": "registry:dt/mocha#2.2.5+20160720003353",
+        "webpack-env": "registry:dt/webpack-env#1.12.2+20160316155526",
+        "zone.js": "registry:dt/zone.js#0.0.0+20160316155526"
+    },
+    "dependencies": {
+        "chai": "registry:npm/chai#3.5.0+20160723033700"
+    }
+}
