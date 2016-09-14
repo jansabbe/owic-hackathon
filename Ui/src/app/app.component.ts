@@ -5,7 +5,5 @@ import { Component } from '@angular/core';
     template: require<string>('./app.component.html')
 })
 export class AppComponent {
-    banaan() : string {
-        return "Banaan";
-    }
+    banaan : string = "Banaan";
 }
