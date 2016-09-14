@@ -5,9 +5,6 @@
     "emitEntryPoint": true
   },
   "dependencies": {},
-  "scripts": {
-    "postcompile": "cd %project:Directory%/Ui && npm run build"
-  },
   "frameworks": {
     "netcoreapp1.0": {
       "dependencies": {

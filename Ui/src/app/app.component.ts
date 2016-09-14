@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: "app",
-    template: `<h1>sjoko {{this.banaan()}}</h1>`
+    template: require<string>('./app.component.html')
 })
 export class AppComponent {
     banaan() : string {
