@@ -6,18 +6,24 @@ namespace PetCupid
     [Route("api/[controller]")]
     public class PetCupidController : Controller
     {
+        private PetCupidRepository _petCupidRepository;
+
+        public PetCupidController()
+        {
+          _petCupidRepository = new PetCupidRepository();
+        }
         // GET: api/values
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<PetCupid> Get()
         {
-            return new string[] { "value1", "value2" };
+            return _petCupidRepository.Get();
         }
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public PetCupid Get(int id)
         {
-            return "value";
+            return _petCupidRepository.Get(id);
         }
 
         // POST api/values
