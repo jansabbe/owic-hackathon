@@ -30,5 +30,36 @@ namespace PetCupid
         {
             return _data.SingleOrDefault(pc => pc.Id == id);
         }
+
+        public void Create(PetCupid petCupid)
+        {
+            var newId = _data.Max(pc => pc.Id) + 1;
+            petCupid.Id = newId;
+            _data.Add(petCupid);
+        }
+
+        public void Update(int id, PetCupid petCupid)
+        {
+            var currentPetCupid = this.Get(id);
+
+            if (currentPetCupid != null)
+            {
+                currentPetCupid.Name = petCupid.Name;
+                currentPetCupid.Kind = petCupid.Kind;
+                currentPetCupid.Img = petCupid.Img;
+                currentPetCupid.ProfileText = petCupid.ProfileText;
+                currentPetCupid.Popularity = petCupid.Popularity;
+            }
+        }
+
+        public void Delete(int id)
+        {
+            var petCupidToDelete = this.Get(id);
+
+            if (petCupidToDelete != null)
+            {
+                _data.Remove(petCupidToDelete);
+            }
+        }
     }
 }
