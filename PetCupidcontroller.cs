@@ -28,20 +28,23 @@ namespace PetCupid
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody]string value)
+        public void Post([FromBody]PetCupid petCupid)
         {
+            _petCupidRepository.Create(petCupid);
         }
 
         // PUT api/values/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
+        public void Put(int id, [FromBody]PetCupid petCupid)
         {
+            _petCupidRepository.Update(id, petCupid);
         }
 
         // DELETE api/values/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+            _petCupidRepository.Delete(id);
         }
     }
 }
