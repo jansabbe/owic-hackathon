@@ -1,0 +1,10 @@
+<div class="gallery">
+    <div class="gallery-pet" *ngFor="let pet of pets">
+        <img class="profile-picture" [src]="pet.img">
+
+        <div class="overlay">
+            <div class="overlay-text">{{pet.name}}</div>
+        </div>
+    </div>
+    
+</div>
