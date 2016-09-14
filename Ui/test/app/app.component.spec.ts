@@ -9,8 +9,4 @@ suite('AppComponent', () => {
         expect(component.banaan()).to.equal('Banaan');
     });
 
-    test('should not return not banaan', () => {
-        const component = new AppComponent();
-        expect(component.banaan()).not.to.equal('not banaan');
-    });
 });

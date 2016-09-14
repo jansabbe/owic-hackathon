@@ -6,7 +6,8 @@ var webpack = require('webpack')
 var webpackConfig = {
   module: {
     loaders: [
-      { test: /\.tsx?$/, loader: 'ts-loader', exclude: /node_modules/ }
+      { test: /\.tsx?$/, loader: 'ts-loader', exclude: /node_modules/ },
+      { test: /\.html$/, loader: 'raw-loader'}
     ]
   },
   resolve: {
