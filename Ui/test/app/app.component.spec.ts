@@ -6,7 +6,7 @@ suite('AppComponent', () => {
 
     test('Should return banaan', () => {
         const component = new AppComponent();
-        expect(component.banaan()).to.equal('Banaan');
+        expect(component.banaan).to.equal('Banaan');
     });
 
 });
