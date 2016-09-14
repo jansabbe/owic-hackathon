@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace PetCupid
 {
@@ -11,9 +12,17 @@ namespace PetCupid
         {
             app.UseDeveloperExceptionPage();
             app.UseFileServer();
-            app.Run(context => context.Response.WriteAsync("Hello world"));
+            app.UseMvc();
+            //app.Run(context => context.Response.WriteAsync("Hello world"));
+        }
+
+        public void ConfigureServices(IServiceCollection services)
+        {
+            services.AddMvc();
         }
     }
+
+    
 
     public class Program
     {
