@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin'),
     CleanWebpackPlugin = require('clean-webpack-plugin'),
+    CopyWebpackPlugin = require('copy-webpack-plugin'),
     webpack = require('webpack'),
     path = require('path');
 
@@ -28,6 +29,7 @@ module.exports = {
     devtool: 'source-map',
     plugins: [
         new CleanWebpackPlugin([outputFolder], {root: rootFolder}),
+        new CopyWebpackPlugin([{from:'./assets', to: path.join(outputFolder, 'assets')}]),
         new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.js'),
         new HtmlWebpackPlugin({
             title: 'PetCupid',
