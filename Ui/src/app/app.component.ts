@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: "app",
-    template: require<string>('./app.component.html'),
-    styleUrls: ["/assets/main.css"]
+    template: require<string>('./app.component.html')
 })
 export class AppComponent {
     banaan : string = "Banaan";
