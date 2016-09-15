@@ -5,3 +5,4 @@ obj
 wwwroot
 typings
 .DS_Store
+Migrations

@@ -8,9 +8,9 @@ namespace PetCupid
     {
         private PetCupidRepository _petCupidRepository;
 
-        public PetCupidController()
+        public PetCupidController(PetCupidContext context)
         {
-          _petCupidRepository = new PetCupidRepository();
+          _petCupidRepository = new PetCupidRepository(context);
         }
         // GET: api/values
         [HttpGet]

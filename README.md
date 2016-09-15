@@ -10,6 +10,38 @@ in Ui
 to run tests
 * `npm build:test`
 
+to create db
+* remove current migrations folder
+* remove current from output path
+* dotnet ef migrations add MyMigration
+* dotnet ef database update
+
+api calls
+* GET http://localhost:5000/api/PetCupid
+* GET http://localhost:5000/api/PetCupid/1
+* POST http://localhost:5000/api/PetCupid 
+```json
+{
+    "name": "Sjoko",
+    "kind": "blub",
+    "img": "images/chicken1.jpg",
+    "profileText": "Meet Princess Fluffybutt! She is one of the fluffiest chickens you will ever meet. Most often you'll find Princess cuddled up in the warmest spot she can find, and if that happens to be in your lap, well then that's fine for her too! Princess also enjoys nomming treats out of your hand, clucking softly under her breath, and following her three sisters around the yard. Get to know Princess today!",
+    "popularity": 0
+  }
+```
+* PUT http://localhost:5000/api/PetCupid/1
+```json
+{
+    "id": 1,
+    "name": "Sjoko",
+    "kind": "blub",
+    "img": "images/chicken1.jpg",
+    "profileText": "Meet Princess Fluffybutt! She is one of the fluffiest chickens you will ever meet. Most often you'll find Princess cuddled up in the warmest spot she can find, and if that happens to be in your lap, well then that's fine for her too! Princess also enjoys nomming treats out of your hand, clucking softly under her breath, and following her three sisters around the yard. Get to know Princess today!",
+    "popularity": 0
+  }
+```
+* DELETE http://localhost:5000/api/PetCupid/1
+
 
 ```js
 

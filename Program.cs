@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace PetCupid
@@ -13,16 +13,14 @@ namespace PetCupid
             app.UseDeveloperExceptionPage();
             app.UseFileServer();
             app.UseMvc();
-            //app.Run(context => context.Response.WriteAsync("Hello world"));
         }
 
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddDbContext<PetCupidContext>(options => options.UseSqlite("Filename=./petcupid.db"));
         }
     }
-
-    
 
     public class Program
     {
